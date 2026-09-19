@@ -1717,14 +1717,12 @@
     </div>
   </div>
 
-  <!-- Background wedding music (supports both assets/ folder and root folder on GitHub) -->
+  <!-- Background wedding music (direct file without folder needed) -->
   <audio id="bgMusic" loop preload="auto">
-    <source src="assets/music.mp3" type="audio/mpeg">
-    <source src="./assets/music.mp3" type="audio/mpeg">
     <source src="music.mp3" type="audio/mpeg">
     <source src="./music.mp3" type="audio/mpeg">
-    <source src="assets/music.opus" type="audio/ogg">
-    <source src="music.opus" type="audio/ogg">
+    <source src="assets/music.mp3" type="audio/mpeg">
+    <source src="./assets/music.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Hero Section -->
@@ -1824,7 +1822,7 @@
         <!-- Groom Card -->
         <div class="couple-card">
           <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
-            <img src="assets/groom_childhood.jpg" onerror="this.onerror=null;this.src='groom_childhood.jpg'" alt="أحمد في طفولته" class="couple-img">
+            <img src="groom_childhood.jpg" onerror="this.onerror=null;this.src='assets/groom_childhood.jpg'" alt="أحمد في طفولته" class="couple-img">
             <span class="child-tag-badge" data-i18n="groom_child_badge"><i class="fa-solid fa-star"></i> طفولة أحمد</span>
           </div>
           <span class="couple-role-pill" data-i18n="groom_role">العريس</span>
@@ -1841,7 +1839,7 @@
         <!-- Bride Card -->
         <div class="couple-card">
           <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
-            <img src="assets/bride_childhood.jpg" onerror="this.onerror=null;this.src='bride_childhood.jpg'" alt="أية في طفولتها" class="couple-img">
+            <img src="bride_childhood.jpg" onerror="this.onerror=null;this.src='assets/bride_childhood.jpg'" alt="أية في طفولتها" class="couple-img">
             <span class="child-tag-badge" data-i18n="bride_child_badge"><i class="fa-solid fa-star"></i> طفولة أية</span>
           </div>
           <span class="couple-role-pill" data-i18n="bride_role">العروسة</span>
