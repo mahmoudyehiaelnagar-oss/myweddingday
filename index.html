@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="ivory-gold">
+<head><script type="application/json" data-od-external-dependencies>["https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js","https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css","https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap","https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80","https://maps.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%B1%D8%B3%D9%8A%D9%84%D9%8A%D8%A7+%D9%83%D9%88%D9%85+%D8%AD%D9%85%D8%A7%D8%AF%D8%A9&t=&z=14&ie=UTF8&iwloc=&output=embed"]</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23575e40'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d6dcc0' stroke-width='2'/%3E%3Ctext x='32' y='41' font-size='22' text-anchor='middle' fill='%23f6f6f2' font-family='Georgia,serif' font-weight='bold'%3EA%26A%3C/text%3E%3C/svg%3E">
+  <title>دعوة زفاف ملكية | أحمد وأية — Royal Wedding Invitation</title>
+  <meta name="description" content="يسرّنا دعوتكم لحفل زفاف أحمد وأية - الأربعاء ٢٣ سبتمبر ٢٠٢٦">
+
+  <!-- Google Fonts for Luxury Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700&family=Cinzel:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons (Non-blocking) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  
+  <!-- Canvas Confetti -->
+  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <style>
+    /* ====================================================
+       THEMES & COLOR PALETTES
+       ==================================================== */
+    :root {
+      /* Castle At Trnova — palette extracted from Svatba-na-Zamku-Chateau-Trnova photo
+         stone ivory sky #e1e2e7 · deep forest #282920 · muted olive #646952 / #778655
+         warm taupe #8d6e54 · deepest blue-green #252c4e */
+      --gold-100: #f6f6f2;
+      --gold-200: #eceddf;
+      --gold-300: #d6dcc0;
+      --gold-400: #9aa083;
+      --gold-500: #6b7350;
+      --gold-600: #575e40;
+      --gold-700: #3f4430;
+      --gold-gradient: linear-gradient(135deg, #eef0e4 0%, #8b9072 35%, #575e40 70%, #6b7350 100%);
+      --gold-shimmer: linear-gradient(90deg, #6b7350 0%, #c9cfae 45%, #6b7350 75%, #3f4430 100%);
+      
+      --bg-primary: #f3f2ec;
+      --bg-secondary: #e9ebe0;
+      --bg-card: rgba(253, 253, 249, 0.94);
+      --bg-card-solid: #fdfdf9;
+      --bg-accent: #282920;
+      
+      --text-main: #2b2b24;
+      --text-muted: #666a58;
+      --text-light: #8b8f7c;
+      --text-gold: #575e40;
+      
+      --rose-accent: #8d6e54;
+      --rose-soft: #f4efe7;
+      
+      --border-gold: rgba(107, 115, 80, 0.35);
+      --border-gold-strong: rgba(87, 94, 64, 0.7);
+      --border-light: rgba(107, 115, 80, 0.14);
+      
+      --shadow-subtle: 0 8px 24px rgba(40, 41, 32, 0.05);
+      --shadow-card: 0 20px 50px rgba(40, 41, 32, 0.10);
+      --shadow-hover: 0 25px 60px rgba(40, 41, 32, 0.16);
+      --glow-gold: 0 0 30px rgba(107, 115, 80, 0.25);
+      
+      --font-arabic-title: 'Aref Ruqaa', serif;
+      --font-arabic-body: 'Cairo', sans-serif;
+      --font-en-script: 'Great Vibes', cursive;
+      --font-en-title: 'Cinzel', serif;
+      --font-en-body: 'Cairo', sans-serif;
+      
+      --radius-sm: 10px;
+      --radius-md: 20px;
+      --radius-lg: 30px;
+      --transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* THEME 2: Midnight Velvet & Rose Gold */
+    html[data-theme="midnight-rose"] {
+      --gold-100: #3a2e39;
+      --gold-200: #e2b3be;
+      --gold-300: #d698a7;
+      --gold-400: #e5a974;
+      --gold-500: #d48f9f;
+      --gold-600: #b56c80;
+      --gold-700: #8a485a;
+      --gold-gradient: linear-gradient(135deg, #fcdde3 0%, #e297ab 45%, #b2586e 100%);
+      --gold-shimmer: linear-gradient(90deg, #d48f9f 0%, #ffe9ee 35%, #d48f9f 70%, #9e4359 100%);
+      
+      --bg-primary: #121016;
+      --bg-secondary: #1a1720;
+      --bg-card: rgba(28, 24, 34, 0.88);
+      --bg-card-solid: #1d1825;
+      --bg-accent: #0b090e;
+      
+      --text-main: #f5edf0;
+      --text-muted: #b9abb2;
+      --text-light: #897982;
+      --text-gold: #f0aab9;
+      
+      --border-gold: rgba(226, 151, 171, 0.35);
+      --border-gold-strong: rgba(226, 151, 171, 0.65);
+      --border-light: rgba(226, 151, 171, 0.15);
+      
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.45);
+      --shadow-hover: 0 22px 55px rgba(226, 151, 171, 0.22);
+      --glow-gold: 0 0 25px rgba(226, 151, 171, 0.3);
+    }
+
+    /* THEME 3: Royal Emerald & Pure Gold */
+    html[data-theme="emerald-gold"] {
+      --gold-100: #193327;
+      --gold-200: #f5e4b8;
+      --gold-300: #e2c27b;
+      --gold-400: #dfb763;
+      --gold-500: #d4af37;
+      --gold-600: #b59024;
+      --gold-700: #8c6e14;
+      --gold-gradient: linear-gradient(135deg, #faebb8 0%, #d4af37 50%, #9b7914 100%);
+      --gold-shimmer: linear-gradient(90deg, #d4af37 0%, #fff4cf 35%, #d4af37 70%, #96740f 100%);
+      
+      --bg-primary: #0a1811;
+      --bg-secondary: #0f2219;
+      --bg-card: rgba(16, 36, 26, 0.9);
+      --bg-card-solid: #11261c;
+      --bg-accent: #050d09;
+      
+      --text-main: #f4f8f5;
+      --text-muted: #a6c0b3;
+      --text-light: #799587;
+      --text-gold: #ecd278;
+      
+      --border-gold: rgba(212, 175, 55, 0.38);
+      --border-gold-strong: rgba(212, 175, 55, 0.7);
+      --border-light: rgba(212, 175, 55, 0.16);
+      
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.35);
+      --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.5);
+      --shadow-hover: 0 22px 55px rgba(212, 175, 55, 0.22);
+      --glow-gold: 0 0 25px rgba(212, 175, 55, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-arabic-body);
+      overflow-x: hidden;
+      line-height: 1.8;
+      position: relative;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    html[dir="ltr"] body {
+      font-family: var(--font-en-body);
+      font-size: 1.05rem;
+    }
+
+    /* Floating Golden Sparkle Canvas in Background */
+    #particleCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.55;
+    }
+
+    /* Subtle Arabesque Damask Overlay */
+    .bg-arabesque-pattern {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 12% 15%, rgba(107, 115, 80, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 88% 85%, rgba(107, 115, 80, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(107, 115, 80, 0.03) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 26px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Typography & Shimmer Effects */
+    .text-gold-gradient {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .shimmer-text {
+      background: var(--gold-shimmer);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 9s linear infinite;
+    }
+    @keyframes textShimmer {
+      to { background-position: 200% center; }
+    }
+
+    /* Top Floating Controls */
+    .top-floating-bar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .top-bar-group {
+      display: flex;
+      gap: 10px;
+      pointer-events: auto;
+      flex-wrap: wrap;
+    }
+
+    .glass-btn {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-gold);
+      color: var(--text-main);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      outline: none;
+    }
+    .glass-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--glow-gold);
+    }
+    .glass-btn i {
+      color: var(--text-gold);
+    }
+
+    /* Sound Bars Animation */
+    .sound-bars {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 14px;
+    }
+    .sound-bars span {
+      width: 3px;
+      background: var(--gold-gradient);
+      border-radius: 2px;
+      height: 4px;
+    }
+    .playing .sound-bars span:nth-child(1) { animation: soundBar 1s ease-in-out infinite 0.1s; }
+    .playing .sound-bars span:nth-child(2) { animation: soundBar 1s ease-in-out infinite 0.3s; }
+    .playing .sound-bars span:nth-child(3) { animation: soundBar 1s ease-in-out infinite 0.2s; }
+    @keyframes soundBar {
+      0%, 100% { height: 4px; }
+      50% { height: 14px; }
+    }
+
+    /* Palette Selector Modal / Dropdown */
+    .theme-menu {
+      position: relative;
+    }
+    .theme-dropdown {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background: var(--bg-card-solid);
+      border: 1px solid var(--border-gold-strong);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-hover);
+      padding: 10px;
+      display: none;
+      min-width: 210px;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+    }
+    html[dir="rtl"] .theme-dropdown {
+      left: auto;
+      right: 0;
+    }
+    .theme-dropdown.show {
+      display: flex;
+    }
+    .theme-opt-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: transparent;
+      border: none;
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+      text-align: right;
+      width: 100%;
+    }
+    html[dir="ltr"] .theme-opt-btn { text-align: left; }
+    .theme-opt-btn:hover, .theme-opt-btn.active {
+      background: var(--border-light);
+      color: var(--text-gold);
+      font-weight: 700;
+    }
+    .theme-color-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-gold);
+    }
+
+    /* ====================================================
+       INTERACTIVE WAX SEAL ROYAL ENVELOPE MODAL
+       ==================================================== */
+    .envelope-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(12, 10, 8, 0.9);
+      backdrop-filter: blur(16px);
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.9s;
+    }
+    .envelope-overlay.opened {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Lock page scroll while the sealed envelope is closed */
+    html.envelope-locked,
+    body.envelope-locked {
+      overflow: hidden;
+    }
+
+    .envelope-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      height: 340px;
+      perspective: 1400px;
+      cursor: pointer;
+    }
+
+    .envelope {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 235, 200, 0.14), transparent 50%),
+        radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.28), transparent 55%),
+        linear-gradient(145deg, #9b7c4e 0%, #7d5f3a 45%, #5f452a 100%);
+      border-radius: 12px;
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.68), 0 0 0 1px rgba(240, 220, 180, 0.2);
+    }
+    .envelope::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 3px);
+      pointer-events: none;
+    }
+
+    /* Aged Leather Strap Across Envelope */
+    .envelope-ribbon-h {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 30px;
+      transform: translateY(-50%);
+      background: linear-gradient(to bottom, #3e2c1b, #241708);
+      box-shadow: inset 0 1px 0 rgba(255, 220, 170, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.4);
+      z-index: 3;
+    }
+    .envelope-ribbon-h::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212, 175, 130, 0.55), transparent);
+      transform: translateY(-50%);
+    }
+
+    /* Flap */
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-left: 240px solid transparent;
+      border-right: 240px solid transparent;
+      border-top: 185px solid #a5855a;
+      transform-origin: top;
+      transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.4s 0.2s;
+      z-index: 5;
+      filter: drop-shadow(0 6px 8px rgba(0,0,0,0.25));
+    }
+    @media (max-width: 520px) {
+      .envelope-wrapper { max-width: 330px; height: 260px; }
+      .envelope-flap {
+        border-left: 165px solid transparent;
+        border-right: 165px solid transparent;
+        border-top: 140px solid #a5855a;
+      }
+    }
+
+    /* Pocket */
+    .envelope-pocket {
+      position: absolute;
+      inset: 0;
+      border-left: 240px solid #6d5133;
+      border-right: 240px solid #7a5c3b;
+      border-bottom: 185px solid #5a3f27;
+      border-top: 155px solid transparent;
+      border-radius: 0 0 12px 12px;
+      z-index: 4;
+    }
+    @media (max-width: 520px) {
+      .envelope-pocket {
+        border-left: 165px solid #6d5133;
+        border-right: 165px solid #7a5c3b;
+        border-bottom: 140px solid #5a3f27;
+        border-top: 120px solid transparent;
+      }
+    }
+
+    /* Ancient Parchment Letter inside envelope */
+    .envelope-letter {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(140, 111, 61, 0.09), transparent 55%),
+        radial-gradient(circle at 85% 90%, rgba(140, 111, 61, 0.12), transparent 50%),
+        #f5ead2;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(40, 28, 14, 0.28), inset 0 0 0 4px rgba(214, 190, 148, 0.35);
+      border: 1px solid #b8986a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px 18px;
+      z-index: 2;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+    }
+    .envelope-letter::before {
+      content: '';
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(139, 110, 84, 0.22);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    .letter-crest-mark {
+      color: #8c1f1f;
+      font-size: 1.55rem;
+      margin-bottom: 6px;
+      filter: drop-shadow(0 2px 3px rgba(140, 31, 31, 0.35));
+    }
+    .letter-title {
+      font-family: var(--font-arabic-title);
+      font-size: 1.45rem;
+      color: #2e211a;
+      margin-bottom: 5px;
+    }
+    .letter-greeting {
+      font-family: var(--font-arabic-title);
+      font-size: 1.05rem;
+      color: #4a3524;
+      margin-bottom: 4px;
+    }
+    .letter-body {
+      color: #5a4632;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      margin-bottom: 7px;
+      max-width: 300px;
+    }
+    .letter-names {
+      font-family: var(--font-en-script);
+      font-size: 1.7rem;
+      color: #14100b;
+      line-height: 1.2;
+    }
+    html[dir="rtl"] .letter-names {
+      font-family: var(--font-arabic-title);
+      font-size: 1.5rem;
+    }
+    .letter-date {
+      color: #8c1f1f;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+    .letter-seal-note {
+      color: #6e5a42;
+      font-size: 0.72rem;
+      margin-top: 3px;
+    }
+
+    .envelope-wrapper.open-anim .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+    .envelope-wrapper.open-anim .envelope-letter {
+      transform: translateY(-110px) scale(1.06);
+    }
+    .envelope-wrapper.open-anim .wax-seal {
+      transform: translate(-50%, -50%) scale(1.3);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    /* Hold phase: keep the letter readable for 5 seconds before the site opens */
+    .envelope-wrapper.letter-hold .envelope-letter {
+      transform: translateY(-118px) scale(1.1);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.7s ease;
+    }
+    .letter-hold-hint {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #f3e6c8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      background: rgba(20, 14, 8, 0.72);
+      border: 1px solid rgba(240, 220, 180, 0.35);
+      border-radius: 999px;
+      padding: 7px 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+      z-index: 12;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .letter-hold-hint i {
+      color: #e8c779;
+    }
+    .envelope-wrapper.letter-hold .letter-hold-hint {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    @media (max-width: 520px) {
+      .letter-hold-hint {
+        font-size: 0.66rem;
+        padding: 6px 12px;
+        white-space: normal;
+        max-width: 86%;
+        text-align: center;
+      }
+    }
+
+    /* Embossed Crimson Wax Seal with 3D Medallion Rim */
+    .wax-seal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 86px;
+      height: 86px;
+      background: radial-gradient(circle at 35% 35%, #c94a33 0%, #8c1f1f 52%, #540d0d 100%);
+      border-radius: 50%;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.62), inset 0 4px 7px rgba(255, 190, 160, 0.5), inset 0 -4px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 7;
+      cursor: pointer;
+      border: 3px dashed rgba(255, 200, 170, 0.35);
+      transition: var(--transition);
+      animation: sealPulse 2.8s ease-in-out infinite;
+    }
+    .wax-seal::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 214, 190, 0.3);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+    }
+    @media (max-width: 520px) {
+      .wax-seal { width: 72px; height: 72px; }
+    }
+    @keyframes sealPulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.08); box-shadow: 0 12px 35px rgba(200, 55, 40, 0.6); }
+    }
+    .wax-seal:hover {
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+    .wax-seal-inner {
+      font-family: var(--font-en-title);
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: #f8e9cf;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65), 0 0 8px rgba(0, 0, 0, 0.3);
+      line-height: 1;
+    }
+
+    .open-prompt-text {
+      position: absolute;
+      bottom: -65px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      animation: floatPrompt 2.2s ease-in-out infinite;
+    }
+    @keyframes floatPrompt {
+      0%, 100% { transform: translateY(0); opacity: 0.9; }
+      50% { transform: translateY(-6px); opacity: 1; text-shadow: 0 0 12px rgba(216, 183, 99, 0.8); }
+    }
+
+    /* ====================================================
+       ROYAL ORNAMENTS & DIVIDERS
+       ==================================================== */
+    .ornament-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin: 28px 0;
+      color: var(--text-gold);
+    }
+    .ornament-wrap::before,
+    .ornament-wrap::after {
+      content: '';
+      height: 1.5px;
+      flex: 1;
+      max-width: 160px;
+      background: var(--gold-gradient);
+    }
+    .ornament-icon {
+      font-size: 1.3rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 55px;
+    }
+    .section-subtitle {
+      color: var(--text-gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2.6rem;
+      color: var(--text-main);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    html[dir="rtl"] .section-title {
+      font-family: var(--font-arabic-title);
+      font-size: 3rem;
+    }
+    html[dir="ltr"] .section-title {
+      font-family: var(--font-en-title);
+      font-size: 2.5rem;
+    }
+
+    /* ====================================================
+       HERO SECTION
+       ==================================================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 24px 70px;
+      position: relative;
+    }
+
+    /* Castle photo frame — Svatba na Zamku (Chateau Trnova), hero showcase */
+    .hero-castle-photo {
+      width: min(470px, 88vw);
+      aspect-ratio: 2 / 3;
+      border-radius: 10px;
+      border: 7px solid #5a442c;
+      outline: 1px solid rgba(230, 205, 160, 0.5);
+      outline-offset: 3px;
+      box-shadow: 0 30px 65px rgba(30, 25, 15, 0.4), 0 0 45px rgba(107, 115, 80, 0.28);
+      margin: 30px auto 34px;
+      background: var(--bg-card);
+      position: relative;
+    }
+    /* Luminous forest ambience behind the frame — the trees read as real */
+    .hero-castle-photo::before {
+      content: '';
+      position: absolute;
+      inset: -70px -50px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(119, 134, 85, 0.5), transparent 60%),
+        radial-gradient(circle at 75% 30%, rgba(107, 115, 80, 0.42), transparent 55%),
+        radial-gradient(circle at 50% 78%, rgba(139, 110, 84, 0.32), transparent 60%);
+      filter: blur(45px);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-castle-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+      filter: saturate(1.1) contrast(1.05) brightness(1.02);
+      transform: scale(1.02);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-castle-photo::after {
+      content: '';
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(240, 225, 195, 0.35);
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Royal Crest / Monogram Emblem */
+    .royal-crest-badge {
+      width: 105px;
+      height: 105px;
+      border: 2px solid var(--border-gold-strong);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      position: relative;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-card), var(--glow-gold);
+      backdrop-filter: blur(12px);
+    }
+    .royal-crest-badge::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 1.5px dashed var(--gold-400);
+      border-radius: 50%;
+      animation: spinCrest 45s linear infinite;
+    }
+    @keyframes spinCrest {
+      to { transform: rotate(360deg); }
+    }
+
+    .crest-initials {
+      font-family: var(--font-en-script);
+      font-size: 2.8rem;
+      color: var(--text-gold);
+      line-height: 1;
+    }
+    html[dir="rtl"] .crest-initials {
+      font-family: var(--font-arabic-title);
+      font-size: 2.5rem;
+    }
+
+    .invitation-quote-box {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      background: rgba(240, 230, 208, 0.55);
+      border: 1px solid rgba(139, 110, 84, 0.4);
+    }
+    .invitation-quote {
+      font-family: var(--font-arabic-title);
+      font-size: 1.45rem;
+      color: var(--text-main);
+      line-height: 1.9;
+    }
+    html[dir="ltr"] .invitation-quote {
+      font-family: var(--font-en-body);
+      font-style: italic;
+      font-size: 1.35rem;
+    }
+
+    .hero-pretitle {
+      font-size: 1.15rem;
+      letter-spacing: 3px;
+      color: var(--text-gold);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero-couple-names {
+      font-size: clamp(3.5rem, 8vw, 6.2rem);
+      color: var(--text-main);
+      margin-bottom: 15px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+    html[dir="rtl"] .hero-couple-names {
+      font-family: var(--font-arabic-title);
+      text-shadow: 0 4px 15px rgba(87, 94, 64, 0.22);
+    }
+    html[dir="ltr"] .hero-couple-names {
+      font-family: var(--font-en-script);
+      font-size: clamp(4.5rem, 9vw, 7.5rem);
+      font-weight: 400;
+    }
+
+    .wedding-date-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold-strong);
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-gold);
+      box-shadow: var(--shadow-subtle);
+      margin-bottom: 16px;
+    }
+
+    .hero-venue-label {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-luxury-gold {
+      background: var(--gold-gradient);
+      color: #1a1510 !important;
+      font-weight: 800;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 28px rgba(107, 115, 80, 0.4);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .btn-luxury-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 36px rgba(87, 94, 64, 0.5);
+    }
+
+    .btn-luxury-outline {
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      border: 1.5px solid var(--border-gold);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      text-decoration: none;
+      box-shadow: var(--shadow-subtle);
+    }
+    .btn-luxury-outline:hover {
+      border-color: var(--border-gold-strong);
+      transform: translateY(-3px);
+      background: var(--border-light);
+    }
+
+    /* ====================================================
+       LIVE COUNTDOWN SECTION
+       ==================================================== */
+    .countdown-section {
+      padding: 70px 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 26px 20px;
+      min-width: 130px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .countdown-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--glow-gold);
+    }
+    .countdown-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold-gradient);
+    }
+
+    .countdown-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-label {
+      font-size: 0.95rem;
+      color: var(--text-gold);
+      font-weight: 700;
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ====================================================
+       SECTION SPACING & GRIDS
+       ==================================================== */
+    .section-spacing {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    /* The Couple Cards */
+    .couple-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .couple-grid { grid-template-columns: 1fr; }
+    }
+
+    .couple-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 45px 35px;
+      text-align: center;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      position: relative;
+      backdrop-filter: blur(12px);
+    }
+    .couple-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .couple-img-container {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      padding: 7px;
+      background: var(--gold-gradient);
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    .couple-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--bg-card-solid);
+      transition: transform 0.4s ease;
+    }
+    .couple-img-container:hover .couple-img {
+      transform: scale(1.04);
+    }
+    .child-tag-badge {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold-gradient);
+      color: #1a1510;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255,255,255,0.4);
+      z-index: 2;
+    }
+
+    .couple-role-pill {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-gold);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .couple-full-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+    html[dir="rtl"] .couple-full-name {
+      font-family: var(--font-arabic-title);
+      font-size: 2.5rem;
+    }
+    .couple-description {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .couple-heart-connector {
+      text-align: center;
+      font-size: 2.6rem;
+      color: var(--text-gold);
+      animation: heartPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes heartPulse {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.25); filter: drop-shadow(0 0 10px rgba(107, 115, 80, 0.55)); }
+      30% { transform: scale(1.05); }
+      45% { transform: scale(1.18); }
+    }
+
+    /* ====================================================
+       LOVE STORY TIMELINE
+       ==================================================== */
+    .story-timeline {
+      position: relative;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+    .story-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--gold-gradient);
+      transform: translateX(-50%);
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 55px;
+      width: 50%;
+      padding: 0 40px;
+    }
+    .timeline-node:nth-child(odd) {
+      left: 0;
+      text-align: left;
+    }
+    html[dir="rtl"] .timeline-node:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-node:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    html[dir="rtl"] .timeline-node:nth-child(even) {
+      left: 50%;
+      text-align: right;
+    }
+
+    .timeline-pin {
+      position: absolute;
+      top: 18px;
+      width: 26px;
+      height: 26px;
+      background: var(--bg-card-solid);
+      border: 4px solid var(--gold-500);
+      border-radius: 50%;
+      z-index: 3;
+      box-shadow: var(--glow-gold);
+    }
+    .timeline-node:nth-child(odd) .timeline-pin { right: -13px; }
+    html[dir="rtl"] .timeline-node:nth-child(odd) .timeline-pin { left: -13px; right: auto; }
+    .timeline-node:nth-child(even) .timeline-pin { left: -13px; }
+    html[dir="rtl"] .timeline-node:nth-child(even) .timeline-pin { right: -13px; left: auto; }
+
+    .timeline-box {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .timeline-box:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--shadow-hover);
+    }
+    .timeline-tag {
+      color: var(--text-gold);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .timeline-heading {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+    .timeline-text {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .story-timeline::before { left: 24px; }
+      html[dir="rtl"] .story-timeline::before { right: 24px; left: auto; }
+      .timeline-node {
+        width: 100% !important;
+        left: 0 !important;
+        padding-left: 60px !important;
+        padding-right: 15px !important;
+        text-align: left !important;
+      }
+      html[dir="rtl"] .timeline-node {
+        padding-right: 60px !important;
+        padding-left: 15px !important;
+        text-align: right !important;
+      }
+      .timeline-pin { left: 11px !important; right: auto !important; }
+      html[dir="rtl"] .timeline-pin { right: 11px !important; left: auto !important; }
+    }
+
+    /* ====================================================
+       SCHEDULE & ITINERARY CARDS
+       ==================================================== */
+    .itinerary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+    }
+    .itinerary-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 34px 22px;
+      text-align: center;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .itinerary-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--shadow-card);
+    }
+    .itinerary-icon-badge {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: var(--border-light);
+      color: var(--text-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+      border: 1px solid var(--border-gold);
+    }
+    .itinerary-card:hover .itinerary-icon-badge {
+      background: var(--gold-gradient);
+      color: #1a1510;
+      transform: rotate(10deg);
+      box-shadow: var(--glow-gold);
+    }
+    .itinerary-time {
+      color: var(--text-gold);
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .itinerary-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .itinerary-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ====================================================
+       VENUE & LOCATION SECTION
+       ==================================================== */
+    .venue-showcase-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      backdrop-filter: blur(12px);
+    }
+    @media (max-width: 920px) {
+      .venue-showcase-card { grid-template-columns: 1fr; }
+    }
+
+    .venue-details-pane {
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .venue-tag-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--border-light);
+      color: var(--text-gold);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      border: 1px solid var(--border-gold);
+      margin-bottom: 18px;
+    }
+    .venue-main-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+    .venue-address-row {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 26px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .venue-specs-list {
+      list-style: none;
+      margin-bottom: 34px;
+    }
+    .venue-specs-list li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .venue-specs-list li i {
+      color: var(--text-gold);
+      font-size: 1.1rem;
+    }
+
+    .venue-map-wrapper {
+      min-height: 420px;
+      background: #eee;
+    }
+    .venue-map-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ====================================================
+       INTERACTIVE RSVP & VIP GUEST PASS
+       ==================================================== */
+    .rsvp-container-box {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-card);
+      padding: 55px 45px;
+      position: relative;
+      backdrop-filter: blur(14px);
+    }
+    @media (max-width: 560px) {
+      .rsvp-container-box { padding: 35px 24px; }
+    }
+
+    .form-group-wrap {
+      margin-bottom: 24px;
+    }
+    .field-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .custom-input {
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border-gold);
+      background: var(--bg-card-solid);
+      font-family: inherit;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      transition: var(--transition);
+      outline: none;
+    }
+    .custom-input:focus {
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--glow-gold);
+    }
+
+    .radio-card-selection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 500px) {
+      .radio-card-selection { grid-template-columns: 1fr; }
+    }
+    .radio-card-opt {
+      border: 1.5px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      background: var(--bg-card-solid);
+      transition: var(--transition);
+    }
+    .radio-card-opt:hover {
+      border-color: var(--border-gold-strong);
+      box-shadow: var(--shadow-subtle);
+    }
+    .radio-card-opt.selected {
+      border-color: var(--gold-500);
+      background: var(--border-light);
+      font-weight: 700;
+    }
+    .radio-card-opt input[type="radio"] {
+      accent-color: var(--gold-500);
+      width: 18px;
+      height: 18px;
+    }
+
+    /* VIP Digital Invitation Pass */
+    .vip-ticket-card {
+      background: linear-gradient(135deg, var(--bg-card-solid) 0%, var(--bg-secondary) 100%);
+      border: 2px dashed var(--gold-500);
+      border-radius: var(--radius-md);
+      padding: 35px 28px;
+      margin: 30px 0;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+    .vip-badge-ribbon {
+      display: inline-block;
+      background: var(--gold-gradient);
+      color: #1a1510;
+      font-weight: 800;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .ticket-guest-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 14px 0 6px;
+    }
+    .ticket-details-txt {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    /* ====================================================
+       GUESTBOOK WISHES SECTION
+       ==================================================== */
+    .guestbook-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .wish-bubble {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .wish-bubble:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--border-gold-strong);
+    }
+    .wish-bubble-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .wish-author {
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 1.1rem;
+    }
+    .wish-date {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .wish-content {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    /* ====================================================
+       PHOTO GALLERY & LIGHTBOX
+       ==================================================== */
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .gallery-tile {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      border: 1px solid var(--border-light);
+    }
+    .gallery-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-tile:hover .gallery-photo {
+      transform: scale(1.09);
+    }
+    .gallery-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 12, 10, 0.8) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .gallery-tile:hover .gallery-vignette {
+      opacity: 1;
+    }
+
+    /* Modal for Image Lightbox */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.94);
+      z-index: 100000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    .lightbox-overlay.active {
+      display: flex;
+    }
+    .lightbox-large-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--gold-400);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+    }
+    .lightbox-dismiss {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #ffffff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ====================================================
+       FOOTER
+       ==================================================== */
+    .royal-footer {
+      background: var(--bg-accent);
+      color: #ffffff;
+      padding: 80px 24px 45px;
+      text-align: center;
+      border-top: 3px solid var(--gold-500);
+      position: relative;
+    }
+    .footer-initials {
+      font-size: 3.2rem;
+      color: var(--gold-300);
+      margin-bottom: 14px;
+    }
+    html[dir="rtl"] .footer-initials {
+      font-family: var(--font-arabic-title);
+      font-size: 3.6rem;
+    }
+    html[dir="ltr"] .footer-initials {
+      font-family: var(--font-en-script);
+      font-size: 4.2rem;
+    }
+    .footer-blessing-text {
+      color: #c2b6a8;
+      max-width: 600px;
+      margin: 0 auto 35px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+    .footer-bottom-copy {
+      color: #797166;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 30px;
+    }
+  </style>
+</head>
+<body class="envelope-locked">
+
+  <!-- Floating Sparkle Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+  <div class="bg-arabesque-pattern"></div>
+
+  <!-- Top Floating Controls (Language, Theme Switcher, Music, RSVP Shortcut) -->
+  <div class="top-floating-bar">
+    <div class="top-bar-group">
+      <!-- Language Switcher -->
+      <button class="glass-btn" id="langToggleBtn" onclick="toggleLanguage()" title="Switch Language">
+        <i class="fa-solid fa-globe"></i>
+        <span id="langBtnText">English</span>
+      </button>
+
+      <!-- Theme Switcher Dropdown -->
+      <div class="theme-menu">
+        <button class="glass-btn" onclick="toggleThemeDropdown()" title="Change Color Palette">
+          <i class="fa-solid fa-palette"></i>
+          <span data-i18n="btn_theme">الألوان</span>
+        </button>
+        <div class="theme-dropdown" id="themeDropdown">
+          <button class="theme-opt-btn active" onclick="setTheme('ivory-gold')">
+            <span class="theme-color-dot" style="background: #6b7350;"></span>
+            <span data-i18n="theme_ivory">حجري هادئ بلمسات زيتونية</span>
+          </button>
+          <button class="theme-opt-btn" onclick="setTheme('midnight-rose')">
+            <span class="theme-color-dot" style="background: #d48f9f;"></span>
+            <span data-i18n="theme_midnight">مخملي ليلي وذهب وردي</span>
+          </button>
+          <button class="theme-opt-btn" onclick="setTheme('emerald-gold')">
+            <span class="theme-color-dot" style="background: #193327;"></span>
+            <span data-i18n="theme_emerald">زمردي فاخر وذهب عيار ٢٤</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Music Player -->
+      <button class="glass-btn" id="musicToggleBtn" onclick="toggleMusic()" title="Play Background Music">
+        <i class="fa-solid fa-music" id="musicIcon"></i>
+        <div class="sound-bars" id="musicBars">
+          <span></span><span></span><span></span>
+        </div>
+        <span id="musicBtnText">الموسيقى</span>
+      </button>
+    </div>
+
+    <div class="top-bar-group">
+      <button class="glass-btn" onclick="reopenEnvelope()" title="View Envelope">
+        <i class="fa-solid fa-envelope"></i>
+        <span data-i18n="btn_envelope">الظرف الملكي</span>
+      </button>
+      <a href="#rsvp" class="glass-btn" style="background: var(--gold-gradient); color: #1a1510; border-color: transparent; font-weight: 800;">
+        <i class="fa-solid fa-check-double"></i>
+        <span data-i18n="btn_rsvp_quick">تأكيد الحضور</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive Wax-Sealed Envelope Overlay -->
+  <div class="envelope-overlay" id="envelopeOverlay">
+    <div class="envelope-wrapper" id="envelopeWrapper" onclick="openInvitation()">
+      <div class="envelope">
+        <div class="envelope-ribbon-h"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-pocket"></div>
+        
+        <div class="envelope-letter">
+          <div class="letter-crest-mark">
+            <i class="fa-solid fa-feather-pointed"></i>
+          </div>
+          <h3 class="letter-title" data-i18n="envelope_card_title">دعوة لحفل زفاف</h3>
+          <p class="letter-greeting" data-i18n="envelope_letter_greeting">عزيزي الضيف الكريم،</p>
+          <p class="letter-body" data-i18n="envelope_letter_body">يسعدنا أن نضم اسمك الكريم إلى قائمة المدعوين لمشاركتنا فرحة زفافنا، فحضوركم يزيد بهجتنا ويكمل سرورنا.</p>
+          <p class="letter-names">أحمد &amp; أية</p>
+          <p class="letter-date" data-i18n="envelope_card_date">٢٣ سبتمبر ٢٠٢٦</p>
+          <p class="letter-seal-note" data-i18n="envelope_letter_venue">قاعة مرسيليا، كوم حمادة</p>
+        </div>
+
+        <div class="wax-seal" id="waxSeal">
+          <span class="wax-seal-inner">A&amp;A</span>
+        </div>
+      </div>
+      
+      <div class="open-prompt-text">
+        <i class="fa-solid fa-hand-pointer"></i> <span data-i18n="envelope_prompt">انقر على الختم الشمعي لفضّ الدعوة</span>
+      </div>
+
+      <div class="letter-hold-hint" id="letterHoldHint">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <span data-i18n="envelope_hold_hint">انقر للدخول فوراً • أو ستُفتح الدعوة تلقائياً</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background wedding music (local file, audio extracted from YouTube) -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/music.opus" type="audio/ogg; codecs=opus">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      
+      <!-- Royal Crest Emblem -->
+      <div class="royal-crest-badge">
+        <div class="crest-initials">A&amp;A</div>
+      </div>
+
+      <!-- Castle Photo (colors extracted from this image) -->
+      <div class="hero-castle-photo">
+        <img src="data:image/webp;base64,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" alt="قلعة ترنوفا — المكان المستوحى منه التصميم">
+      </div>
+
+      <!-- Quranic Blessing / Romantic Quote Box -->
+      <div class="invitation-quote-box">
+        <p class="invitation-quote" data-i18n="hero_quote">
+          "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
+        </p>
+      </div>
+
+      <div class="ornament-wrap">
+        <i class="fa-solid fa-heart ornament-icon"></i>
+      </div>
+
+      <p class="hero-pretitle" data-i18n="hero_intro">
+        يسرّنا بدعوة الأهل والأصدقاء لمشاركتنا فرحة العمر
+      </p>
+
+      <h1 class="hero-couple-names shimmer-text" data-i18n="hero_names">
+        أحمد &amp; أية
+      </h1>
+
+      <div class="wedding-date-pill">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span data-i18n="hero_date">الأربعاء، ٢٣ سبتمبر ٢٠٢٦</span>
+      </div>
+
+      <p class="hero-venue-label" data-i18n="hero_venue">
+        قاعة مرسيليا — كوم حمادة
+      </p>
+
+      <div class="hero-actions">
+        <a href="#rsvp" class="btn-luxury-gold">
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <span data-i18n="btn_rsvp_hero">تأكيد حضورك الكريم</span>
+        </a>
+        <button onclick="downloadCalendarInvite()" class="btn-luxury-outline">
+          <i class="fa-solid fa-calendar-plus"></i>
+          <span data-i18n="btn_calendar">إضافة للتقويم</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Live Countdown Timer -->
+  <section class="countdown-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 35px;">
+        <p class="section-subtitle" data-i18n="countdown_title">متبقي على موعد زفافنا</p>
+      </div>
+
+      <div class="countdown-grid">
+        <div class="countdown-card">
+          <div class="countdown-number text-gold-gradient" id="days">00</div>
+          <div class="countdown-label" data-i18n="cd_days">أيام</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number text-gold-gradient" id="hours">00</div>
+          <div class="countdown-label" data-i18n="cd_hours">ساعات</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number text-gold-gradient" id="minutes">00</div>
+          <div class="countdown-label" data-i18n="cd_minutes">دقائق</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number text-gold-gradient" id="seconds">00</div>
+          <div class="countdown-label" data-i18n="cd_seconds">ثواني</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Couple Section -->
+  <section class="section-spacing" id="couple">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" data-i18n="couple_subtitle">عن العروسين</p>
+        <h2 class="section-title" data-i18n="couple_title">قلبان يجتمعان على المحبة والوفاء</h2>
+        <div class="ornament-wrap"><i class="fa-solid fa-infinity ornament-icon"></i></div>
+      </div>
+
+      <div class="couple-grid">
+        <!-- Groom Card -->
+        <div class="couple-card">
+          <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
+            <img src="assets/groom_childhood.jpg" alt="أحمد في طفولته" class="couple-img">
+            <span class="child-tag-badge" data-i18n="groom_child_badge"><i class="fa-solid fa-star"></i> طفولة أحمد</span>
+          </div>
+          <span class="couple-role-pill" data-i18n="groom_role">العريس</span>
+          <h3 class="couple-full-name text-gold-gradient" data-i18n="groom_name">أحمد</h3>
+          <p class="couple-description" data-i18n="groom_bio">
+            "وجدت في أية الأمان والسكينة التي تمنيتها طوال حياتي، وأتشرف بدعوة كل من أحب ليشاركنا بداية أجمل حكاية عمر."
+          </p>
+        </div>
+
+        <div class="couple-heart-connector">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <!-- Bride Card -->
+        <div class="couple-card">
+          <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
+            <img src="assets/bride_childhood.jpg" alt="أية في طفولتها" class="couple-img">
+            <span class="child-tag-badge" data-i18n="bride_child_badge"><i class="fa-solid fa-star"></i> طفولة أية</span>
+          </div>
+          <span class="couple-role-pill" data-i18n="bride_role">العروسة</span>
+          <h3 class="couple-full-name text-gold-gradient" data-i18n="bride_name">أية</h3>
+          <p class="couple-description" data-i18n="bride_bio">
+            "مع أحمد، كل لحظة تصبح ذكرى جميلة وكل خطوة تمتلئ بالحياة. يسعدني أن تكونوا معنا لنحتفل بفرحتنا ونبدأ عهدنا الجديد."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Event Itinerary Schedule -->
+  <section class="section-spacing" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" data-i18n="sched_subtitle">برنامج الحفل</p>
+        <h2 class="section-title" data-i18n="sched_title">مواعيد فعاليات السهرة الملكية</h2>
+        <div class="ornament-wrap"><i class="fa-solid fa-champagne-glasses ornament-icon"></i></div>
+      </div>
+
+      <div class="itinerary-grid">
+        <div class="itinerary-card">
+          <div class="itinerary-icon-badge"><i class="fa-solid fa-utensils"></i></div>
+          <div class="itinerary-time" data-i18n="sched_time_1">من ٢:٠٠ إلى ٥:٠٠ مساءً</div>
+          <h4 class="itinerary-title" data-i18n="sched_name_1">واجب الغداء</h4>
+          <p class="itinerary-desc" data-i18n="sched_desc_1">يسعدنا مشاركتكم وجبة الغداء.</p>
+        </div>
+
+        <div class="itinerary-card">
+          <div class="itinerary-icon-badge"><i class="fa-solid fa-bell-concierge"></i></div>
+          <div class="itinerary-time" data-i18n="sched_time_2">٨:٠٠ مساءً</div>
+          <h4 class="itinerary-title" data-i18n="sched_name_2">استقبال الضيوف</h4>
+          <p class="itinerary-desc" data-i18n="sched_desc_2">نستقبلكم بكل محبة وفرح.</p>
+        </div>
+
+        <div class="itinerary-card">
+          <div class="itinerary-icon-badge"><i class="fa-solid fa-drum"></i></div>
+          <div class="itinerary-time" data-i18n="sched_time_3">٩:٠٠ مساءً</div>
+          <h4 class="itinerary-title" data-i18n="sched_name_3">الزفة</h4>
+          <p class="itinerary-desc" data-i18n="sched_desc_3">لحظة دخول العروسين وبدء الاحتفال.</p>
+        </div>
+
+        <div class="itinerary-card">
+          <div class="itinerary-icon-badge"><i class="fa-solid fa-music"></i></div>
+          <div class="itinerary-time" data-i18n="sched_time_4">١٠:٠٠ مساءً</div>
+          <h4 class="itinerary-title" data-i18n="sched_name_4">الرقصة</h4>
+          <p class="itinerary-desc" data-i18n="sched_desc_4">نحتفل معاً بأجمل لحظات الفرح.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Location & Details -->
+  <section class="section-spacing" style="background: var(--bg-secondary);" id="venue">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" data-i18n="venue_subtitle">موقع الحفل</p>
+        <h2 class="section-title" data-i18n="venue_title">قاعة مرسيليا</h2>
+        <div class="ornament-wrap"><i class="fa-solid fa-location-dot ornament-icon"></i></div>
+      </div>
+
+      <div class="venue-showcase-card">
+        <div class="venue-details-pane">
+          <span class="venue-tag-badge" data-i18n="venue_hall_badge">قاعة الأفراح</span>
+          <h3 class="venue-main-title text-gold-gradient" data-i18n="venue_name_full">قاعة مرسيليا</h3>
+          <p class="venue-address-row">
+            <i class="fa-solid fa-map-pin" style="color: var(--text-gold);"></i>
+            <span data-i18n="venue_address_text">كوم حمادة — نزلة الكوبري الجديد بجوار سيتي بارك، محافظة البحيرة</span>
+          </p>
+
+          <ul class="venue-specs-list">
+            <li>
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <span data-i18n="venue_feat_valet">قاعة مرسيليا للأفراح والمناسبات</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span data-i18n="venue_feat_dress">أهلاً وسهلاً بكم لمشاركتنا فرحة العمر</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span data-i18n="venue_feat_kids">كوم حمادة، محافظة البحيرة</span>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%B1%D8%B3%D9%8A%D9%84%D9%8A%D8%A7+%D9%83%D9%88%D9%85+%D8%AD%D9%85%D8%A7%D8%AF%D8%A9" target="_blank" class="btn-luxury-gold">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span data-i18n="btn_directions">فتح في خرائط Google</span>
+            </a>
+            <button onclick="copyVenueAddress()" class="btn-luxury-outline" id="copyAddressBtn">
+              <i class="fa-solid fa-copy"></i>
+              <span data-i18n="btn_copy_address">نسخ العنوان</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="venue-map-wrapper">
+          <iframe 
+            class="venue-map-frame"
+            title="خريطة موقع حفل الزفاف"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%B1%D8%B3%D9%8A%D9%84%D9%8A%D8%A7+%D9%83%D9%88%D9%85+%D8%AD%D9%85%D8%A7%D8%AF%D8%A9&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Interactive RSVP Form Section -->
+  <section class="section-spacing" style="background: var(--bg-secondary);" id="rsvp">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" data-i18n="rsvp_sec_subtitle">يسعدنا حضوركم</p>
+        <h2 class="section-title" data-i18n="rsvp_sec_title">تأكيد حضور حفل الزفاف الملكي</h2>
+        <div class="ornament-wrap"><i class="fa-solid fa-envelope-circle-check ornament-icon"></i></div>
+      </div>
+
+      <div class="rsvp-container-box">
+        <!-- Input Form -->
+        <form id="rsvpForm" onsubmit="handleRsvpSubmit(event)">
+          <div class="form-group-wrap">
+            <label class="field-label" for="guestName" data-i18n="form_label_name">الاسم الكريم بالكامل *</label>
+            <input type="text" id="guestName" class="custom-input" placeholder="مثال: د. كريم أحمد" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+            <div class="form-group-wrap">
+              <label class="field-label" for="guestPhone" data-i18n="form_label_phone">رقم الهاتف / واتساب *</label>
+              <input type="tel" id="guestPhone" class="custom-input" placeholder="+20 100 000 0000" required>
+            </div>
+            <div class="form-group-wrap">
+              <label class="field-label" for="guestEmail" data-i18n="form_label_email">البريد الإلكتروني</label>
+              <input type="email" id="guestEmail" class="custom-input" placeholder="name@example.com">
+            </div>
+          </div>
+
+          <div class="form-group-wrap">
+            <label class="field-label" data-i18n="form_label_attendance">حالة الحضور *</label>
+            <div class="radio-card-selection">
+              <label class="radio-card-opt selected" id="pillAttending">
+                <input type="radio" name="attendance" value="attending" checked onchange="handleAttendanceChange(this)">
+                <div>
+                  <div style="color: #27814b; font-weight: 700;" data-i18n="form_attend_yes">يشرفني الحضور بكل سرور</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="form_attend_yes_sub">سأكون متواجداً للاحتفال معكم</div>
+                </div>
+              </label>
+
+              <label class="radio-card-opt" id="pillDeclined">
+                <input type="radio" name="attendance" value="declined" onchange="handleAttendanceChange(this)">
+                <div>
+                  <div style="color: var(--rose-accent); font-weight: 700;" data-i18n="form_attend_no">أعتذر بكل محبة</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="form_attend_no_sub">لن أتمكن من الحضور لظرف ما</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div id="guestsCountGroup" class="form-group-wrap">
+            <label class="field-label" for="guestCount" data-i18n="form_label_count">عدد المرافقين (بالإضافة إليك)</label>
+            <select id="guestCount" class="custom-input">
+              <option value="0" data-i18n="opt_solo">أنا بمفردي (شخص واحد)</option>
+              <option value="1" data-i18n="opt_plus_one">مرافق واحد (+1)</option>
+              <option value="2" data-i18n="opt_plus_two">مرافقين (+2)</option>
+              <option value="3" data-i18n="opt_plus_three">٣ مرافقين (+3)</option>
+            </select>
+          </div>
+
+          <div class="form-group-wrap">
+            <label class="field-label" for="guestMessage" data-i18n="form_label_message">كلمة تهنئة ودعوة للعروسين</label>
+            <textarea id="guestMessage" class="custom-input" rows="3" placeholder="اكتب أمنياتك ودعواتك للعروسين..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-luxury-gold" style="width: 100%; justify-content: center; font-size: 1.2rem; padding: 18px;">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="btn_submit_rsvp">إرسال تأكيد الحضور</span>
+          </button>
+        </form>
+
+        <!-- Success Screen with Digital VIP Invitation Pass -->
+        <div class="vip-ticket-card" id="rsvpSuccessCard" style="display: none;">
+          <div style="font-size: 3.8rem; color: var(--text-gold); margin-bottom: 12px;">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="vip-badge-ribbon" data-i18n="pass_vip_badge">بطاقة دعوة ملكية رسمية</div>
+          <div class="ticket-guest-name text-gold-gradient" id="passGuestName">كريم أحمد</div>
+          <p class="ticket-details-txt" id="passGuestDetails">
+            الأربعاء، ٢٣ سبتمبر ٢٠٢٦ • قاعة مرسيليا — كوم حمادة • مقعد مخصص
+          </p>
+          
+          <!-- Styled QR Code Vector -->
+          <div style="background: #fff; display: inline-block; padding: 14px; border-radius: 12px; border: 2px solid var(--gold-500); margin-bottom: 20px;">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#2a2521" stroke-width="1.8">
+              <rect x="2" y="2" width="7" height="7" rx="1" fill="#c59b3f" fill-opacity="0.25"></rect>
+              <rect x="4" y="4" width="3" height="3" fill="#c59b3f"></rect>
+              <rect x="15" y="2" width="7" height="7" rx="1" fill="#c59b3f" fill-opacity="0.25"></rect>
+              <rect x="17" y="4" width="3" height="3" fill="#c59b3f"></rect>
+              <rect x="2" y="15" width="7" height="7" rx="1" fill="#c59b3f" fill-opacity="0.25"></rect>
+              <rect x="4" y="17" width="3" height="3" fill="#c59b3f"></rect>
+              <path d="M15 15h2v2h-2zM19 15h3v3h-3zM15 19h3v3h-3zM20 20h2v2h-2zM10 4h2v2h-2zM10 10h4v2h-4zM4 10h2v2H4zM10 16h2v4h-2z"></path>
+            </svg>
+          </div>
+          
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a id="whatsappShareBtn" href="#" target="_blank" class="btn-luxury-gold" style="background: #25D366; color: #fff; border-color: #25D366; font-weight: 700; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+              <span data-i18n="btn_whatsapp_rsvp">إرسال التهنئة للعروسين عبر واتساب</span>
+            </a>
+            <button onclick="window.print()" class="btn-luxury-outline">
+              <i class="fa-solid fa-print"></i>
+              <span data-i18n="btn_print_pass">طباعة / حفظ البطاقة</span>
+            </button>
+            <button onclick="resetRsvpForm()" class="btn-luxury-outline">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+              <span data-i18n="btn_edit_rsvp">تعديل الرد</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wishes & Guestbook Section -->
+  <section class="section-spacing" id="wishes">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" data-i18n="guestbook_subtitle">سجل التهاني</p>
+        <h2 class="section-title" data-i18n="guestbook_title">كلمات الأحباء والأصدقاء</h2>
+        <div class="ornament-wrap"><i class="fa-solid fa-comments ornament-icon"></i></div>
+      </div>
+
+      <div class="guestbook-feed-grid" id="guestbookFeed">
+        <!-- Dynamic wishes inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Royal Footer -->
+  <footer class="royal-footer">
+    <div class="container">
+      <div class="footer-initials text-gold-gradient">أحمد &amp; أية</div>
+      <p class="footer-blessing-text" data-i18n="footer_note">
+        وجودكم بجانبنا يكتمل به سرورنا وتزهو به ليلتنا. نسأل الله العلي القدير أن يبارك لنا ولكم ويجمعنا دائماً على الخير والمحبة.
+      </p>
+      <div class="ornament-wrap" style="color: var(--gold-300); margin-bottom: 30px;">
+        <i class="fa-solid fa-heart ornament-icon"></i>
+      </div>
+      <p class="footer-bottom-copy">
+        © 2026 حفل زفاف أحمد &amp; أية — تصميم وتطوير ملكي فاخر بكل محبة
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-dismiss" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Zoomed Photo" class="lightbox-large-img" id="lightboxImg">
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    /* ====================================================
+       BACKGROUND SPARKLE CANVAS PARTICLES
+       ==================================================== */
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class GoldParticle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2.2 + 0.6;
+        this.speedY = Math.random() * 0.4 + 0.15;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.opacity = Math.random() * 0.7 + 0.2;
+        this.fadeSpeed = Math.random() * 0.008 + 0.003;
+      }
+      update() {
+        this.y -= this.speedY;
+        this.x += this.speedX;
+        this.opacity += this.fadeSpeed;
+        if (this.opacity > 0.85 || this.opacity < 0.15) {
+          this.fadeSpeed = -this.fadeSpeed;
+        }
+        if (this.y < 0) {
+          this.y = canvas.height + 10;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(216, 183, 99, ${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    const particleCount = window.innerWidth < 768 ? 16 : 28;
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new GoldParticle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    /* ====================================================
+       THEME PALETTE SWITCHER
+       ==================================================== */
+    function toggleThemeDropdown() {
+      const dd = document.getElementById('themeDropdown');
+      dd.classList.toggle('show');
+    }
+
+    function setTheme(themeName) {
+      document.documentElement.setAttribute('data-theme', themeName);
+      localStorage.setItem('wedding_invitation_theme', themeName);
+      
+      document.querySelectorAll('.theme-opt-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      const activeBtn = document.querySelector(`.theme-opt-btn[onclick*="${themeName}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      document.getElementById('themeDropdown').classList.remove('show');
+    }
+
+    // Load saved theme if any
+    const savedTheme = localStorage.getItem('wedding_invitation_theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+
+    // Close theme menu if clicked outside
+    document.addEventListener('click', (e) => {
+      const menu = document.querySelector('.theme-menu');
+      if (menu && !menu.contains(e.target)) {
+        document.getElementById('themeDropdown').classList.remove('show');
+      }
+    });
+
+    /* ====================================================
+       MULTILINGUAL DICTIONARY (Arabic & English)
+       ==================================================== */
+    let currentLang = 'ar';
+
+    const translations = {
+      ar: {
+        btn_theme: "الألوان",
+        theme_ivory: "حجري هادئ بلمسات زيتونية",
+        theme_midnight: "مخملي ليلي وذهب وردي",
+        theme_emerald: "زمردي فاخر وذهب عيار ٢٤",
+        envelope_card_title: "دعوة لحفل زفاف",
+        envelope_card_date: "٢٣ سبتمبر ٢٠٢٦",
+        envelope_letter_greeting: "عزيزي الضيف الكريم،",
+        envelope_letter_body: "يسعدنا أن نضم اسمك الكريم إلى قائمة المدعوين لمشاركتنا فرحة زفافنا، فحضوركم يزيد بهجتنا ويكمل سرورنا.",
+        envelope_letter_venue: "قاعة مرسيليا، كوم حمادة",
+        envelope_prompt: "انقر على الختم الشمعي لفضّ الدعوة",
+        envelope_hold_hint: "انقر للدخول فوراً • أو ستُفتح الدعوة تلقائياً",
+        btn_envelope: "الظرف الملكي",
+        btn_rsvp_quick: "تأكيد الحضور",
+        hero_quote: `"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"`,
+        hero_intro: "يسرّنا بدعوة الأهل والأصدقاء لمشاركتنا فرحة العمر",
+        hero_names: "أحمد & أية",
+        hero_date: "الأربعاء، ٢٣ سبتمبر ٢٠٢٦",
+        hero_venue: "قاعة مرسيليا — كوم حمادة",
+        btn_rsvp_hero: "تأكيد حضورك الكريم",
+        btn_calendar: "إضافة للتقويم",
+        countdown_title: "متبقي على موعد زفافنا",
+        cd_days: "أيام",
+        cd_hours: "ساعات",
+        cd_minutes: "دقائق",
+        cd_seconds: "ثواني",
+        couple_subtitle: "عن العروسين",
+        couple_title: "قلبان يجتمعان على المحبة والوفاء",
+        groom_role: "العريس",
+        groom_child_badge: '<i class="fa-solid fa-star"></i> طفولة أحمد',
+        groom_name: "أحمد",
+        groom_bio: `"وجدت في أية الأمان والسكينة التي تمنيتها طوال حياتي، وأتشرف بدعوة كل من أحب ليشاركنا بداية أجمل حكاية عمر."`,
+        bride_role: "العروسة",
+        bride_child_badge: '<i class="fa-solid fa-star"></i> طفولة أية',
+        bride_name: "أية",
+        bride_bio: `"مع أحمد، كل لحظة تصبح ذكرى جميلة وكل خطوة تمتلئ بالحياة. يسعدني أن تكونوا معنا لنحتفل بفرحتنا ونبدأ عهدنا الجديد."`,
+        story_subtitle: "رحلتنا معاً",
+        story_title: "قصة حبنا خطوة بخطوة",
+        story_date_1: "أكتوبر ٢٠٢٢",
+        story_title_1: "اللقاء الأول",
+        story_desc_1: "صدفة جميلة جمعتنا في معرض الفنون التشكيلية، بدأت بابتسامة وتحولت إلى أحاديث دافئة لا تنتهي.",
+        story_date_2: "أغسطس ٢٠٢٣",
+        story_title_2: "رحلتنا الأولى إلى دهب",
+        story_desc_2: "سافرنا معاً وشاهدنا شروق الشمس فوق الجبال والبحر الذهبي، وتأكدنا أن كلاً منا وجد رفيق دربه الحقيقي.",
+        story_date_3: "ديسمبر ٢٠٢٥",
+        story_title_3: "طلب الزواج على ضفاف النيل",
+        story_desc_3: "تحت ضوء النجوم وعلى أنغام هادئة تعكس أضواء القاهرة، قالت 'نعم' لنبدأ فصلاً جديداً مليئاً بالوعود.",
+        story_date_4: "٢٣ سبتمبر ٢٠٢٦",
+        story_title_4: "يوم الزفاف الملكي الموعود",
+        story_desc_4: "اليوم الذي نتوج فيه حبنا أمامكم جميعاً، لنبني معاً بيتاً يملؤه الوفاء والسعادة والمحبة.",
+        sched_subtitle: "برنامج الحفل",
+        sched_title: "مواعيد فعاليات السهرة الملكية",
+        sched_time_1: "من ٢:٠٠ إلى ٥:٠٠ مساءً",
+        sched_name_1: "واجب الغداء",
+        sched_desc_1: "يسعدنا مشاركتكم وجبة الغداء.",
+        sched_time_2: "٨:٠٠ مساءً",
+        sched_name_2: "استقبال الضيوف",
+        sched_desc_2: "نستقبلكم بكل محبة وفرح.",
+        sched_time_3: "٩:٠٠ مساءً",
+        sched_name_3: "الزفة",
+        sched_desc_3: "لحظة دخول العروسين وبدء الاحتفال.",
+        sched_time_4: "١٠:٠٠ مساءً",
+        sched_name_4: "الرقصة",
+        sched_desc_4: "نحتفل معاً بأجمل لحظات الفرح.",
+        venue_subtitle: "موقع الحفل",
+        venue_title: "قاعة مرسيليا",
+        venue_hall_badge: "قاعة الأفراح",
+        venue_name_full: "قاعة مرسيليا",
+        venue_address_text: "كوم حمادة — نزلة الكوبري الجديد بجوار سيتي بارك، محافظة البحيرة",
+        venue_feat_valet: "قاعة مرسيليا للأفراح والمناسبات",
+        venue_feat_dress: "أهلاً وسهلاً بكم لمشاركتنا فرحة العمر",
+        venue_feat_kids: "كوم حمادة، محافظة البحيرة",
+        btn_directions: "فتح في خرائط Google",
+        btn_copy_address: "نسخ العنوان",
+        gallery_subtitle: "لحظات لا تُنسى",
+        gallery_title: "معرض الصور التذكارية",
+        gallery_caption_1: "نظرة أمل وبداية عهد جديد",
+        gallery_caption_2: "رباط العمر المقدس",
+        gallery_caption_3: "ابتسامات تضيء اللحظات",
+        gallery_caption_4: "زهور المحبة والفرح",
+        rsvp_sec_subtitle: "يسعدنا حضوركم",
+        rsvp_sec_title: "تأكيد حضور حفل الزفاف الملكي",
+        form_label_name: "الاسم الكريم بالكامل *",
+        form_label_phone: "رقم الهاتف / واتساب *",
+        form_label_email: "البريد الإلكتروني",
+        form_label_attendance: "حالة الحضور *",
+        form_attend_yes: "يشرفني الحضور بكل سرور",
+        form_attend_yes_sub: "سأكون متواجداً للاحتفال معكم",
+        form_attend_no: "أعتذر بكل محبة",
+        form_attend_no_sub: "لن أتمكن من الحضور لظرف ما",
+        form_label_count: "عدد المرافقين (بالإضافة إليك)",
+        opt_solo: "أنا بمفردي (شخص واحد)",
+        opt_plus_one: "مرافق واحد (+1)",
+        opt_plus_two: "مرافقين (+2)",
+        opt_plus_three: "٣ مرافقين (+3)",
+        form_label_message: "كلمة تهنئة ودعوة للعروسين",
+        btn_submit_rsvp: "إرسال تأكيد الحضور",
+        pass_vip_badge: "بطاقة دعوة ملكية رسمية",
+        btn_whatsapp_rsvp: "إرسال التهنئة للعروسين عبر واتساب",
+        btn_print_pass: "طباعة / حفظ البطاقة",
+        btn_edit_rsvp: "تعديل الرد",
+        guestbook_subtitle: "سجل التهاني",
+        guestbook_title: "كلمات الأحباء والأصدقاء",
+        footer_note: "وجودكم بجانبنا يكتمل به سرورنا وتزهو به ليلتنا. نسأل الله العلي القدير أن يبارك لنا ولكم ويجمعنا دائماً على الخير والمحبة."
+      },
+      en: {
+        btn_theme: "Palettes",
+        theme_ivory: "Calm Stone & Olive",
+        theme_midnight: "Midnight Velvet & Rose Gold",
+        theme_emerald: "Imperial Emerald & 24K Gold",
+        envelope_card_title: "Royal Wedding Invitation",
+        envelope_card_date: "September 23, 2026",
+        envelope_letter_greeting: "Dear Honored Guest,",
+        envelope_letter_body: "It is our pleasure to include your name among the invitees to share in the joy of our wedding; your presence adds to our happiness and completes our delight.",
+        envelope_letter_venue: "Marseille Hall, Kom Hamada",
+        envelope_prompt: "Click wax seal to reveal the royal invitation",
+        envelope_hold_hint: "Click to enter now • or opens in a moment",
+        btn_envelope: "Royal Envelope",
+        btn_rsvp_quick: "RSVP Now",
+        hero_quote: `"Two souls with but a single thought, two hearts that beat as one."`,
+        hero_intro: "Together with their families, joyfully invite you to celebrate the marriage of",
+        hero_names: "Ahmed & Aya",
+        hero_date: "Wednesday, September 23, 2026",
+        hero_venue: "Marseille Hall — Kom Hamada",
+        btn_rsvp_hero: "Confirm Your Attendance",
+        btn_calendar: "Add to Calendar",
+        countdown_title: "Counting Down to Our Special Day",
+        cd_days: "Days",
+        cd_hours: "Hours",
+        cd_minutes: "Minutes",
+        cd_seconds: "Seconds",
+        couple_subtitle: "The Couple",
+        couple_title: "Two Hearts United in Eternal Love",
+        groom_role: "The Groom",
+        groom_child_badge: '<i class="fa-solid fa-star"></i> Ahmed in Childhood',
+        groom_name: "Ahmed",
+        groom_bio: `"In Aya, I discovered peace, companionship, and endless joy. I cannot wait to celebrate this new chapter with all who matter to us."`,
+        bride_role: "The Bride",
+        bride_child_badge: '<i class="fa-solid fa-star"></i> Aya in Childhood',
+        bride_name: "Aya",
+        bride_bio: `"With Ahmed, every day feels brighter and every dream seems closer. We are so thrilled to welcome you to our wedding celebration."`,
+        story_subtitle: "Our Journey",
+        story_title: "How Our Love Began & Grew",
+        story_date_1: "October 2022",
+        story_title_1: "When We First Met",
+        story_desc_1: "A serendipitous meeting at an art exhibition that started with a simple smile and sparked conversations that lasted hours.",
+        story_date_2: "August 2023",
+        story_title_2: "Our First Getaway to Dahab",
+        story_desc_2: "Watching sunrise over golden mountains and turquoise waters, knowing we had found our true lifelong companion.",
+        story_date_3: "December 2025",
+        story_title_3: "The Nile Proposal",
+        story_desc_3: "Beneath the evening stars along the quiet banks of the Nile, she said 'Yes' to forever.",
+        story_date_4: "September 23, 2026",
+        story_title_4: "Our Royal Wedding Celebration",
+        story_desc_4: "The day we exchange vows surrounded by our beloved family and closest friends.",
+        sched_subtitle: "Celebration Schedule",
+        sched_title: "Royal Evening Itinerary",
+        sched_time_1: "02:00 PM - 05:00 PM",
+        sched_name_1: "Lunch Banquet",
+        sched_desc_1: "We are pleased to invite you to share our wedding lunch.",
+        sched_time_2: "08:00 PM",
+        sched_name_2: "Guest Reception",
+        sched_desc_2: "Welcoming all guests with love and joy.",
+        sched_time_3: "09:00 PM",
+        sched_name_3: "Zaffa & Grand Entrance",
+        sched_desc_3: "Arrival of the bride and groom and beginning of the celebration.",
+        sched_time_4: "10:00 PM",
+        sched_name_4: "First Dance & Party",
+        sched_desc_4: "Celebrating together our most beautiful moments.",
+        venue_subtitle: "Location",
+        venue_title: "Marseille Hall",
+        venue_hall_badge: "Wedding & Events Hall",
+        venue_name_full: "Marseille Hall",
+        venue_address_text: "Kom Hamada — Near New Bridge & City Park, El Beheira",
+        venue_feat_valet: "Marseille Hall for weddings & celebrations",
+        venue_feat_dress: "Delighted to share our special night with you",
+        venue_feat_kids: "Kom Hamada, El Beheira Governorate",
+        btn_directions: "Open in Google Maps",
+        btn_copy_address: "Copy Address",
+        gallery_subtitle: "Timeless Moments",
+        gallery_title: "Engagement & Memories",
+        gallery_caption_1: "A gaze towards our shared future",
+        gallery_caption_2: "Sacred bond of devotion",
+        gallery_caption_3: "Laughter in every heartbeat",
+        gallery_caption_4: "Blooms of joy and elegance",
+        rsvp_sec_subtitle: "Join Us",
+        rsvp_sec_title: "Confirm Your Attendance",
+        form_label_name: "Full Name *",
+        form_label_phone: "Phone / WhatsApp *",
+        form_label_email: "Email Address",
+        form_label_attendance: "Will You Attend? *",
+        form_attend_yes: "Joyfully Accepts",
+        form_attend_yes_sub: "I will be there to celebrate with you",
+        form_attend_no: "Regretfully Declines",
+        form_attend_no_sub: "Warmest wishes from afar",
+        form_label_count: "Number of Guests with You",
+        opt_solo: "Just me (1 Person)",
+        opt_plus_one: "+1 Guest",
+        opt_plus_two: "+2 Guests",
+        opt_plus_three: "+3 Guests",
+        form_label_message: "Wishes & Congratulations",
+        btn_submit_rsvp: "Submit Attendance Confirmation",
+        pass_vip_badge: "Official VIP Invitation Pass",
+        btn_whatsapp_rsvp: "Send Wishes to Couple via WhatsApp",
+        btn_print_pass: "Print / Save Pass",
+        btn_edit_rsvp: "Edit RSVP",
+        guestbook_subtitle: "Guestbook",
+        guestbook_title: "Warm Wishes from Family & Friends",
+        footer_note: "Your presence brings warmth and completes our joy. We cannot wait to celebrate the most memorable night of our lives together."
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      
+      const langBtnText = document.getElementById('langBtnText');
+      langBtnText.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.innerHTML = translations[currentLang][key];
+        }
+      });
+
+      document.getElementById('guestName').placeholder = currentLang === 'ar' ? 'مثال: د. كريم أحمد' : 'e.g. Dr. Karim Ahmed';
+      document.getElementById('guestMessage').placeholder = currentLang === 'ar' ? 'اكتب أمنياتك ودعواتك للعروسين...' : 'Share your blessings and wishes...';
+      document.getElementById('musicBtnText').textContent = currentLang === 'ar' ? 'الموسيقى' : 'Music';
+    }
+
+    /* ====================================================
+       INTERACTIVE ENVELOPE OPENING
+       ==================================================== */
+    let envelopeTimer = null;
+
+    function finishOpening() {
+      const overlay = document.getElementById('envelopeOverlay');
+      if (!overlay || overlay.classList.contains('opened')) return;
+      if (envelopeTimer) {
+        clearTimeout(envelopeTimer);
+        envelopeTimer = null;
+      }
+      overlay.classList.add('opened');
+      document.documentElement.classList.remove('envelope-locked');
+      document.body.classList.remove('envelope-locked');
+    }
+
+    function openInvitation() {
+      const wrapper = document.getElementById('envelopeWrapper');
+      const overlay = document.getElementById('envelopeOverlay');
+
+      // Prevent double-trigger while opening
+      if (wrapper.classList.contains('open-anim')) return;
+      
+      wrapper.classList.add('open-anim');
+      
+      // Trigger gold confetti shower
+      if (typeof confetti === 'function') {
+        setTimeout(() => {
+          confetti({
+            particleCount: 80,
+            spread: 90,
+            origin: { y: 0.6 },
+            colors: ['#6b7350', '#9aa083', '#8d6e54', '#f6f6f2']
+          });
+        }, 300);
+      }
+
+      startAmbientAudio();
+
+      // Phase 1: the flap swings open and the letter rises out (~700ms)
+      setTimeout(() => {
+        wrapper.classList.add('letter-hold');
+      }, 700);
+
+      // Phase 2: hold the letter briefly, then smoothly reveal the site
+      envelopeTimer = setTimeout(() => {
+        finishOpening();
+      }, 700 + 1800);
+    }
+
+    // Skip-wait: a second tap after the letter rises enters immediately
+    (function setupSkipTap() {
+      const wrapper = document.getElementById('envelopeWrapper');
+      if (!wrapper) return;
+      wrapper.addEventListener('click', () => {
+        if (wrapper.classList.contains('open-anim') && wrapper.classList.contains('letter-hold')) {
+          finishOpening();
+        }
+      });
+    })();
+
+    // Auto-open: if the guest never taps the envelope, reveal the site automatically
+    // (the timer is registered on page load, NOT inside openInvitation, so it runs
+    //  even if the envelope is never touched)
+    setTimeout(() => {
+      const overlay = document.getElementById('envelopeOverlay');
+      if (overlay && !overlay.classList.contains('opened')) {
+        const wrapper = document.getElementById('envelopeWrapper');
+        if (wrapper && !wrapper.classList.contains('open-anim')) {
+          wrapper.classList.add('open-anim');
+          setTimeout(() => wrapper.classList.add('letter-hold'), 700);
+        }
+        envelopeTimer = setTimeout(() => {
+          finishOpening();
+        }, 700 + 1800);
+      }
+    }, 4000);
+
+    function reopenEnvelope() {
+      const wrapper = document.getElementById('envelopeWrapper');
+      const overlay = document.getElementById('envelopeOverlay');
+      if (envelopeTimer) {
+        clearTimeout(envelopeTimer);
+        envelopeTimer = null;
+      }
+      document.documentElement.classList.add('envelope-locked');
+      document.body.classList.add('envelope-locked');
+      wrapper.classList.remove('open-anim');
+      wrapper.classList.remove('letter-hold');
+      overlay.classList.remove('opened');
+    }
+
+    /* Prevent background scroll while the envelope is closed (desktop + mobile) */
+    (function () {
+      const overlay = document.getElementById('envelopeOverlay');
+      if (!overlay) return;
+      const lockScroll = (e) => {
+        if (!overlay.classList.contains('opened')) e.preventDefault();
+      };
+      overlay.addEventListener('wheel', lockScroll, { passive: false });
+      overlay.addEventListener('touchmove', lockScroll, { passive: false });
+    })();
+
+    /* ====================================================
+       BACKGROUND WEDDING MUSIC (mp3 song + fallback)
+       ==================================================== */
+    const bgMusic = document.getElementById('bgMusic');
+    let isPlaying = false;
+    let audioUnlocked = false;
+    let bgMusicError = false;
+
+    if (bgMusic) {
+      bgMusic.volume = 0.75;
+      bgMusic.addEventListener('error', () => {
+        console.warn("Audio file missing or failed to load. Falling back to soft piano synthesis.");
+        bgMusicError = true;
+        if (isPlaying) {
+          startPianoFallback();
+        }
+      }, true);
+      // Detect missing files up front (fires 'error' on <source> tags)
+      const sources = bgMusic.querySelectorAll('source');
+      let failedSources = 0;
+      sources.forEach(src => {
+        src.addEventListener('error', () => {
+          failedSources++;
+          if (failedSources >= sources.length) {
+            bgMusicError = true;
+          }
+        }, true);
+      });
+    }
+
+    function updateMusicUI(playing) {
+      const btn = document.getElementById('musicToggleBtn');
+      const icon = document.getElementById('musicIcon');
+      const text = document.getElementById('musicBtnText');
+      if (btn) {
+        btn.classList.toggle('playing', playing);
+      }
+      if (icon) {
+        icon.className = playing ? "fa-solid fa-volume-high" : "fa-solid fa-volume-xmark";
+      }
+      if (text) {
+        text.textContent = playing ? (currentLang === 'ar' ? 'إيقاف' : 'Pause') : (currentLang === 'ar' ? 'الموسيقى' : 'Music');
+      }
+    }
+
+    let audioCtx = null;
+    let melodyTimer = null;
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          audioCtx = new AudioContext();
+        }
+      }
+    }
+
+    function playSoftPianoNote(freq, startTime, duration = 3.0) {
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, startTime);
+      
+      gain.gain.setValueAtTime(0.0001, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.085, startTime + 0.07);
+      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+      
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      
+      osc.start(startTime);
+      osc.stop(startTime + duration);
+    }
+
+    const chordProgression = [
+      [293.66, 369.99, 440.00, 587.33], // D - F# - A - D
+      [246.94, 293.66, 369.99, 440.00], // Bm7
+      [196.00, 246.94, 293.66, 369.99], // Gmaj7
+      [220.00, 277.18, 329.63, 440.00]  // A
+    ];
+
+    let chordIndex = 0;
+    function playNextArpeggio() {
+      if (!isPlaying || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      const notes = chordProgression[chordIndex];
+      
+      notes.forEach((freq, idx) => {
+        playSoftPianoNote(freq, now + idx * 0.45, 3.2);
+      });
+
+      chordIndex = (chordIndex + 1) % chordProgression.length;
+      melodyTimer = setTimeout(playNextArpeggio, 2300);
+    }
+
+    function stopPianoFallback() {
+      if (melodyTimer) {
+        clearTimeout(melodyTimer);
+        melodyTimer = null;
+      }
+    }
+
+    function startPianoFallback() {
+      try {
+        initAudio();
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        isPlaying = true;
+        updateMusicUI(true);
+        playNextArpeggio();
+      } catch(e) {
+        console.log("Audio autoplay prevented or error:", e);
+      }
+    }
+
+    function startAmbientAudio() {
+      if (bgMusic && !bgMusicError) {
+        bgMusic.play().then(() => {
+          isPlaying = true;
+          audioUnlocked = true;
+          stopPianoFallback();
+          updateMusicUI(true);
+        }).catch((err) => {
+          console.log("bgMusic autoplay prevented or failed:", err);
+          if (bgMusicError) {
+            startPianoFallback();
+          }
+        });
+        return;
+      }
+      startPianoFallback();
+    }
+
+    function toggleMusic() {
+      if (bgMusic) {
+        if (bgMusic.paused) {
+          stopPianoFallback();
+          bgMusic.play().then(() => {
+            isPlaying = true;
+            audioUnlocked = true;
+            updateMusicUI(true);
+          }).catch((err) => {
+            console.warn("Could not play audio:", err);
+            startPianoFallback();
+          });
+        } else {
+          bgMusic.pause();
+          isPlaying = false;
+          updateMusicUI(false);
+          stopPianoFallback();
+        }
+        return;
+      }
+
+      // Fallback: Web Audio piano
+      initAudio();
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        updateMusicUI(true);
+        playNextArpeggio();
+      } else {
+        updateMusicUI(false);
+        stopPianoFallback();
+      }
+    }
+
+    // Auto-unlock music on very first user interaction anywhere on the page
+    (function setupAudioAutoUnlock() {
+      const unlock = () => {
+        if (!audioUnlocked && !bgMusicError && bgMusic && bgMusic.paused) {
+          bgMusic.play().then(() => {
+            isPlaying = true;
+            audioUnlocked = true;
+            updateMusicUI(true);
+          }).catch(() => {});
+        }
+      };
+      ['click', 'touchstart', 'touchend', 'keydown'].forEach(evt => {
+        document.addEventListener(evt, unlock, { once: true, passive: true });
+      });
+    })();
+
+    /* ====================================================
+       LIVE COUNTDOWN TIMER
+       ==================================================== */
+    const weddingDate = new Date('2026-09-23T14:00:00+03:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      } else {
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    /* ====================================================
+       INTERACTIVE RSVP FORM & VIP PASS
+       ==================================================== */
+    function handleAttendanceChange(radio) {
+      const pillAttending = document.getElementById('pillAttending');
+      const pillDeclined = document.getElementById('pillDeclined');
+      const countGroup = document.getElementById('guestsCountGroup');
+      
+      if (radio.value === 'attending') {
+        pillAttending.classList.add('selected');
+        pillDeclined.classList.remove('selected');
+        countGroup.style.display = 'block';
+      } else {
+        pillDeclined.classList.add('selected');
+        pillAttending.classList.remove('selected');
+        countGroup.style.display = 'none';
+      }
+    }
+
+    function handleRsvpSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('guestName').value.trim();
+      const phone = document.getElementById('guestPhone').value.trim();
+      const email = document.getElementById('guestEmail').value.trim();
+      const attendance = document.querySelector('input[name="attendance"]:checked').value;
+      const count = document.getElementById('guestCount').value;
+      const message = document.getElementById('guestMessage').value.trim();
+
+      if (!name) return;
+
+      const rsvpData = { name, phone, email, attendance, count, message, timestamp: new Date().toISOString() };
+      localStorage.setItem('wedding_rsvp_response', JSON.stringify(rsvpData));
+
+      if (message) {
+        addWishToGuestbook(name, message, currentLang === 'ar' ? 'الآن' : 'Just now');
+      }
+
+      // Configure WhatsApp Direct Greeting
+      const whatsappBtn = document.getElementById('whatsappShareBtn');
+      if (whatsappBtn) {
+        const attendanceText = attendance === 'attending' 
+          ? (currentLang === 'ar' ? 'يسعدني ويشرفني تأكيد الحضور لحفل الزفاف السعيد 🕊️' : 'Delighted to confirm attendance for the wedding 🕊️')
+          : (currentLang === 'ar' ? 'أعتذر عن الحضور لظروف خاصة مع أصدق الدعوات بالسعادة 🤍' : 'Regretfully declining with my warmest wishes and blessings 🤍');
+        
+        const companionsText = (attendance === 'attending' && parseInt(count) > 0)
+          ? (currentLang === 'ar' ? `\nعدد المرافقين: +${count}` : `\nGuests: +${count}`)
+          : '';
+        
+        const wishText = message ? `\n\nكلمة التهنئة ودعائي لكما:\n"${message}"` : '';
+
+        const fullWaText = currentLang === 'ar'
+          ? `السلام عليكم ورحمة الله وبركاته،\nألف مبروك لأجمل وأغلى عروسين أحمد & أية! ✨💍\n\nالاسم: ${name}\nحالة الحضور: ${attendanceText}${companionsText}${wishText}\n\nنلتقي على خير يوم الأربعاء ٢٣ سبتمبر ٢٠٢٦ في قاعة مرسيليا — كوم حمادة!`
+          : `Warmest congratulations to the lovely couple Ahmed & Aya! ✨💍\n\nName: ${name}\nStatus: ${attendanceText}${companionsText}${wishText}\n\nLooking forward to celebrating on Wednesday, Sep 23, 2026 at Marseille Hall!`;
+
+        whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(fullWaText)}`;
+      }
+
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 140,
+          spread: 110,
+          origin: { y: 0.55 },
+          colors: ['#c9cfae', '#6b7350', '#8d6e54', '#ffffff']
+        });
+      }
+
+      document.getElementById('passGuestName').textContent = name;
+      if (attendance === 'attending') {
+        const companionsText = count > 0 ? (currentLang === 'ar' ? ` + ${count} مرافق` : ` + ${count} Guest(s)`) : '';
+        document.getElementById('passGuestDetails').textContent = 
+          (currentLang === 'ar' ? `الأربعاء، ٢٣ سبتمبر ٢٠٢٦ • قاعة مرسيليا • مقعد مؤكد` : `Wednesday, Sep 23, 2026 • Marseille Hall • Confirmed Seat`) + companionsText;
+      } else {
+        document.getElementById('passGuestDetails').textContent = 
+          currentLang === 'ar' ? 'تم تسجيل اعتذارك بكل محبة وتقدير' : 'Warmest wishes recorded with love and thanks';
+      }
+
+      document.getElementById('rsvpForm').style.display = 'none';
+      document.getElementById('rsvpSuccessCard').style.display = 'block';
+    }
+
+    function resetRsvpForm() {
+      document.getElementById('rsvpForm').style.display = 'block';
+      document.getElementById('rsvpSuccessCard').style.display = 'none';
+    }
+
+    /* ====================================================
+       GUESTBOOK WISHES FEED & PERSISTENT STORAGE
+       ==================================================== */
+    const defaultWishes = [
+      { name: "المهندس طارق وسارة", text: "ألف ألف مبروك يا أروع عروسين! بارك الله لكما وبارك عليكما وجمع بينكما في خير وسعادة دائمة.", time: "منذ ساعتين" },
+      { name: "د. هبة مصطفى", text: "فرحتكم فرحتنا جميعاً، ربنا يسعدكم ويجعل حياتكم مليانة حب وتوفيق وبركة وسرور.", time: "منذ ٥ ساعات" },
+      { name: "عائلة المهندس يحيى", text: "أجمل عروسين في الدنيا، متشوقين للاحتفال بيكم وبأحلى ليلة في العمر تليق بجمالكم وسعادتكم.", time: "اليوم" }
+    ];
+
+    function getLocalWishes() {
+      try {
+        const stored = localStorage.getItem('wedding_guestbook_wishes');
+        return stored ? JSON.parse(stored) : [];
+      } catch (err) {
+        return [];
+      }
+    }
+
+    function saveLocalWishes(wishes) {
+      try {
+        localStorage.setItem('wedding_guestbook_wishes', JSON.stringify(wishes));
+      } catch (err) {
+        console.warn('Could not save to localStorage', err);
+      }
+    }
+
+    function escapeHtml(text) {
+      const p = document.createElement('p');
+      p.textContent = text;
+      return p.innerHTML;
+    }
+
+    function renderGuestbook() {
+      const feed = document.getElementById('guestbookFeed');
+      if (!feed) return;
+      feed.innerHTML = '';
+
+      const localWishes = getLocalWishes();
+      const allWishes = [...localWishes, ...defaultWishes];
+
+      allWishes.forEach(item => {
+        const bubble = document.createElement('div');
+        bubble.className = 'wish-bubble';
+        bubble.innerHTML = `
+          <div class="wish-bubble-head">
+            <span class="wish-author"><i class="fa-solid fa-user-circle" style="color: var(--text-gold); margin-inline-end: 6px;"></i>${escapeHtml(item.name)}</span>
+            <span class="wish-date">${escapeHtml(item.time || '')}</span>
+          </div>
+          <p class="wish-content">"${escapeHtml(item.text)}"</p>
+        `;
+        feed.appendChild(bubble);
+      });
+    }
+
+    function addWishToGuestbook(name, text, time) {
+      const local = getLocalWishes();
+      local.unshift({ name, text, time: time || (currentLang === 'ar' ? 'الآن' : 'Just now') });
+      saveLocalWishes(local);
+      renderGuestbook();
+    }
+    renderGuestbook();
+
+    /* ====================================================
+       CALENDAR INVITE GENERATOR (.ics Download)
+       ==================================================== */
+    function downloadCalendarInvite() {
+      const icsData = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Royal Wedding Invitation//Ahmed and Aya//EN',
+        'BEGIN:VEVENT',
+        'SUMMARY:حفل زفاف أحمد وأية | Royal Wedding of Ahmed & Aya',
+        'DESCRIPTION:يسرنا دعوتكم لحفل زفاف أحمد وأية في قاعة مرسيليا، كوم حمادة، محافظة البحيرة.',
+        'LOCATION:قاعة مرسيليا، كوم حمادة، محافظة البحيرة | Marseille Hall, Kom Hamada, Egypt',
+        'DTSTART:20260923T110000Z',
+        'DTEND:20260923T210000Z',
+        'STATUS:CONFIRMED',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'Ahmed-Aya-Royal-Wedding.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    /* ====================================================
+       COPY ADDRESS HELPER
+       ==================================================== */
+    function copyVenueAddress() {
+      const address = "قاعة مرسيليا — نزلة الكوبري الجديد بجوار سيتي بارك، كوم حمادة، محافظة البحيرة";
+      navigator.clipboard.writeText(address).then(() => {
+        const btn = document.getElementById('copyAddressBtn');
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = `<i class="fa-solid fa-check" style="color: #27814b;"></i> <span>تم النسخ بنجاح!</span>`;
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+        }, 2500);
+      });
+    }
+
+    /* ====================================================
+       IMAGE LIGHTBOX
+       ==================================================== */
+    function openLightbox(url) {
+      document.getElementById('lightboxImg').src = url;
+      document.getElementById('lightboxModal').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
