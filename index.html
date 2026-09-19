@@ -1717,10 +1717,14 @@
     </div>
   </div>
 
-  <!-- Background wedding music (local file, audio extracted from YouTube) -->
-  <audio id="bgMusic" loop preload="none">
-    <source src="assets/music.opus" type="audio/ogg; codecs=opus">
+  <!-- Background wedding music (supports both assets/ folder and root folder on GitHub) -->
+  <audio id="bgMusic" loop preload="auto">
     <source src="assets/music.mp3" type="audio/mpeg">
+    <source src="./assets/music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="./music.mp3" type="audio/mpeg">
+    <source src="assets/music.opus" type="audio/ogg">
+    <source src="music.opus" type="audio/ogg">
   </audio>
 
   <!-- Hero Section -->
@@ -1820,7 +1824,7 @@
         <!-- Groom Card -->
         <div class="couple-card">
           <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
-            <img src="assets/groom_childhood.jpg" alt="أحمد في طفولته" class="couple-img">
+            <img src="assets/groom_childhood.jpg" onerror="this.onerror=null;this.src='groom_childhood.jpg'" alt="أحمد في طفولته" class="couple-img">
             <span class="child-tag-badge" data-i18n="groom_child_badge"><i class="fa-solid fa-star"></i> طفولة أحمد</span>
           </div>
           <span class="couple-role-pill" data-i18n="groom_role">العريس</span>
@@ -1837,7 +1841,7 @@
         <!-- Bride Card -->
         <div class="couple-card">
           <div class="couple-img-container" onclick="openLightbox(this.querySelector('img').src)" title="اضغط لتكبير الصورة" style="cursor: pointer;">
-            <img src="assets/bride_childhood.jpg" alt="أية في طفولتها" class="couple-img">
+            <img src="assets/bride_childhood.jpg" onerror="this.onerror=null;this.src='bride_childhood.jpg'" alt="أية في طفولتها" class="couple-img">
             <span class="child-tag-badge" data-i18n="bride_child_badge"><i class="fa-solid fa-star"></i> طفولة أية</span>
           </div>
           <span class="couple-role-pill" data-i18n="bride_role">العروسة</span>
@@ -2545,27 +2549,17 @@
     const bgMusic = document.getElementById('bgMusic');
     let isPlaying = false;
     let audioUnlocked = false;
-    let bgMusicError = false;
 
     if (bgMusic) {
-      bgMusic.volume = 0.75;
-      bgMusic.addEventListener('error', () => {
-        console.warn("Audio file missing or failed to load. Falling back to soft piano synthesis.");
-        bgMusicError = true;
-        if (isPlaying) {
-          startPianoFallback();
-        }
-      }, true);
-      // Detect missing files up front (fires 'error' on <source> tags)
-      const sources = bgMusic.querySelectorAll('source');
-      let failedSources = 0;
-      sources.forEach(src => {
-        src.addEventListener('error', () => {
-          failedSources++;
-          if (failedSources >= sources.length) {
-            bgMusicError = true;
-          }
-        }, true);
+      bgMusic.volume = 0.8;
+      bgMusic.addEventListener('play', () => {
+        isPlaying = true;
+        audioUnlocked = true;
+        updateMusicUI(true);
+      });
+      bgMusic.addEventListener('pause', () => {
+        isPlaying = false;
+        updateMusicUI(false);
       });
     }
 
@@ -2658,75 +2652,53 @@
     }
 
     function startAmbientAudio() {
-      if (bgMusic && !bgMusicError) {
-        bgMusic.play().then(() => {
-          isPlaying = true;
-          audioUnlocked = true;
-          stopPianoFallback();
-          updateMusicUI(true);
-        }).catch((err) => {
-          console.log("bgMusic autoplay prevented or failed:", err);
-          if (bgMusicError) {
-            startPianoFallback();
-          }
-        });
-        return;
-      }
-      startPianoFallback();
+      if (!bgMusic) return;
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        audioUnlocked = true;
+        stopPianoFallback();
+        updateMusicUI(true);
+      }).catch((err) => {
+        console.log("Audio waiting for user gesture:", err);
+      });
     }
 
     function toggleMusic() {
-      if (bgMusic) {
-        if (bgMusic.paused) {
-          stopPianoFallback();
-          bgMusic.play().then(() => {
-            isPlaying = true;
-            audioUnlocked = true;
-            updateMusicUI(true);
-          }).catch((err) => {
-            console.warn("Could not play audio:", err);
-            startPianoFallback();
-          });
-        } else {
-          bgMusic.pause();
-          isPlaying = false;
-          updateMusicUI(false);
-          stopPianoFallback();
-        }
-        return;
-      }
-
-      // Fallback: Web Audio piano
-      initAudio();
-      if (audioCtx && audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-      
-      isPlaying = !isPlaying;
-      if (isPlaying) {
-        updateMusicUI(true);
-        playNextArpeggio();
+      if (!bgMusic) return;
+      if (bgMusic.paused) {
+        stopPianoFallback();
+        bgMusic.play().then(() => {
+          isPlaying = true;
+          audioUnlocked = true;
+          updateMusicUI(true);
+        }).catch((err) => {
+          console.warn("Could not play audio, trying fallback:", err);
+          startPianoFallback();
+        });
       } else {
+        bgMusic.pause();
+        isPlaying = false;
         updateMusicUI(false);
         stopPianoFallback();
       }
     }
 
-    // Auto-unlock music on very first user interaction anywhere on the page
-    (function setupAudioAutoUnlock() {
-      const unlock = () => {
-        if (!audioUnlocked && !bgMusicError && bgMusic && bgMusic.paused) {
-          bgMusic.play().then(() => {
-            isPlaying = true;
-            audioUnlocked = true;
-            updateMusicUI(true);
-          }).catch(() => {});
-        }
-      };
-      ['click', 'touchstart', 'touchend', 'keydown'].forEach(evt => {
-        document.addEventListener(evt, unlock, { once: true, passive: true });
-      });
-    })();
+    // Auto-unlock music on user interaction anywhere on the page
+    function unlockAudioOnInteraction() {
+      if (audioUnlocked || !bgMusic) return;
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        audioUnlocked = true;
+        updateMusicUI(true);
+        ['click', 'touchstart', 'touchend', 'keydown'].forEach(evt => {
+          document.removeEventListener(evt, unlockAudioOnInteraction);
+        });
+      }).catch(() => {});
+    }
+
+    ['click', 'touchstart', 'touchend', 'keydown'].forEach(evt => {
+      document.addEventListener(evt, unlockAudioOnInteraction, { passive: true });
+    });
 
     /* ====================================================
        LIVE COUNTDOWN TIMER
